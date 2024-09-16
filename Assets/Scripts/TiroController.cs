@@ -5,7 +5,7 @@ using UnityEngine;
 public class TiroController : MonoBehaviour
 {
     private Rigidbody2D rb;
-    [SerializeField] private float velocidade = 5;
+    [SerializeField] private float velocidade = 5f;
     [SerializeField] private GameObject nave;
 
     // Start is called before the first frame update

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-
-    [SerializeField] private GameObject tiro;
+    [SerializeField] private GameObject inimigo01;
 
     // Start is called before the first frame update
     void Start()
