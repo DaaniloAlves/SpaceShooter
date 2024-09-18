@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject tiro;
     private int HP;
     private float controladorTiro = 0f;
+    private float minimoY = -4.3f;
+    private float maximoY = 4.3f;
+    private float minimoX = -8.22f;
+    private float maximoX = 8.22f;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -32,9 +37,9 @@ public class PlayerController : MonoBehaviour
 			{
 				atirar();
 			}
-		}	
-        
-        
+		}
+
+        controlarLimites();
         destruirTiro();
 	}
 
@@ -52,4 +57,25 @@ public class PlayerController : MonoBehaviour
 			Destroy(tiro);
 		}
 	}
+
+    void controlarLimites()
+    {
+        if (transform.position.y > maximoY)
+        {
+            transform.position = new Vector3(transform.position.x, maximoY, transform.position.z);
+        } else if(transform.position.y < minimoY) {
+			transform.position = new Vector3(transform.position.x, minimoY, transform.position.z);
+		}
+         
+        if (transform.position.x > maximoX)
+        {
+			transform.position = new Vector3(maximoX, transform.position.y, transform.position.z);
+		} else if (transform.position.x < minimoX)
+        {
+			transform.position = new Vector3(minimoX, transform.position.y, transform.position.z);
+		}
+
+
+    }
+
 }
