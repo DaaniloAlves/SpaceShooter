@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3406421946869070159}
   m_Layer: 9
   m_Name: TiroInimigo
-  m_TagString: Untagged
+  m_TagString: Tiro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: -2
   nave: {fileID: 0}
+  animacao: {fileID: 7800321715257387237, guid: e7e240e5541ba1e47a9016e7e57899eb, type: 3}
 --- !u!50 &2289118777434918570
 Rigidbody2D:
   serializedVersion: 4
@@ -157,7 +158,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

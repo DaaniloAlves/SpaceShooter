@@ -507,14 +507,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inimigo01
       objectReference: {fileID: 0}
-    - target: {fileID: 4402017077145837915, guid: 8b917cb11d5ba8a42b7646d7c70f0bad, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4402017077145837915, guid: 8b917cb11d5ba8a42b7646d7c70f0bad, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 318578127
-      objectReference: {fileID: 0}
     - target: {fileID: 6985242056091635427, guid: 8b917cb11d5ba8a42b7646d7c70f0bad, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.86
@@ -570,11 +562,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4593290606521394054, guid: f9b8e938a31ffb64ba5ee339b680f61d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.941
+      value: -3.69
       objectReference: {fileID: 0}
     - target: {fileID: 4593290606521394054, guid: f9b8e938a31ffb64ba5ee339b680f61d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.4
+      value: -2.23
       objectReference: {fileID: 0}
     - target: {fileID: 4593290606521394054, guid: f9b8e938a31ffb64ba5ee339b680f61d, type: 3}
       propertyPath: m_LocalPosition.z

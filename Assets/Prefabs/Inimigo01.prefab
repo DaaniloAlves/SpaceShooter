@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 659597326875957014}
   m_Layer: 6
   m_Name: Inimigo01
-  m_TagString: Untagged
+  m_TagString: Inimigo01
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,7 +47,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1000000
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -61,7 +61,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &6751253498706217226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,6 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: -1
   tiro: {fileID: 3126863670266408728, guid: fb1d9c474babb6f4487c625f6dc2b6a3, type: 3}
+  animacaoDestruicao: {fileID: 2036328772004920935, guid: 9cc9e36b858b0414ca74ec73ca9f87fe, type: 3}
 --- !u!61 &659597326875957014
 BoxCollider2D:
   m_ObjectHideFlags: 0

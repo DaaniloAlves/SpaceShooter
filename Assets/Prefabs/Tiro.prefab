@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 8224318987712673921}
   m_Layer: 8
   m_Name: Tiro
-  m_TagString: Untagged
+  m_TagString: Tiro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: 8
   nave: {fileID: 7631339137878756956, guid: f9b8e938a31ffb64ba5ee339b680f61d, type: 3}
+  animacao: {fileID: 7800321715257387237, guid: e7e240e5541ba1e47a9016e7e57899eb, type: 3}
 --- !u!50 &191453503609278819
 Rigidbody2D:
   serializedVersion: 4
@@ -211,7 +212,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

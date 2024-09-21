@@ -3,12 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : EntidadeController
 {
     private float velocidade = 5f;
     private Rigidbody2D rb;
     [SerializeField] private GameObject tiro;
-    private int HP;
     private float controladorTiro = 0f;
     private float minimoY = -4.3f;
     private float maximoY = 4.3f;
@@ -17,6 +16,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        HP = 2;
     }
 
     // Update is called once per frame
@@ -30,7 +30,10 @@ public class PlayerController : MonoBehaviour
 		rb.velocity =  minhaVelocidade * velocidade;
 
         // instanciando o tiro e controlando o intervalo de tempo entre os tiros
-		controladorTiro -= 0.1f;
+        if (controladorTiro > 0f)
+        {
+			controladorTiro -= 2f * Time.deltaTime;
+		}
         if (Input.GetKey(KeyCode.Space) )
         {
 			if (controladorTiro <= 0f)
@@ -41,12 +44,13 @@ public class PlayerController : MonoBehaviour
 
         controlarLimites();
         destruirTiro();
+        Debug.Log(controladorTiro);
 	}
 
     void atirar()
     {
             Instantiate(tiro, new Vector3(transform.position.x, transform.position.y + 0.85f, transform.position.z), Quaternion.identity);
-		controladorTiro = 5f;
+		controladorTiro = 1f;
 	}
 
 	void destruirTiro()
@@ -74,8 +78,8 @@ public class PlayerController : MonoBehaviour
         {
 			transform.position = new Vector3(minimoX, transform.position.y, transform.position.z);
 		}
-
-
     }
+
+    
 
 }
