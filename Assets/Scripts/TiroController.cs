@@ -24,12 +24,13 @@ public class TiroController : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-        if (!collision.CompareTag("Tiro"))
+        if (collision.CompareTag("Inimigo") || collision.CompareTag("Jogador"))
         {
 			collision.GetComponent<EntidadeController>().perderVida(1);
 		}
         Instantiate(animacao, transform.position, Quaternion.identity);
 	    Destroy(this.gameObject);
+		
 	}
 
 

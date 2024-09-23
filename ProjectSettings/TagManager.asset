@@ -4,9 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Inimigo01
   - Jogador
   - Tiro
+  - Destruidor
+  - Inimigo
+  - Inimigo01
   layers:
   - Default
   - TransparentFX

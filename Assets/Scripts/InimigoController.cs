@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class InimigoController : EntidadeController
 {
-    private Rigidbody2D rb;
-    [SerializeField] private float velocidade = -2.5f;
-    [SerializeField] private GameObject tiro;
-    private float controladorTiro = 0f;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0, velocidade);
-        HP = 5;
+        velocidade = -2.5f;
     }
 
     // Update is called once per frame
@@ -22,11 +18,7 @@ public class InimigoController : EntidadeController
         if (verificarVisibilidade())
         {
             controladorTiro -= 1f * Time.deltaTime;
-            if (controladorTiro <= 0)
-            {
-                atirar();
-                controladorTiro = 2f;
-            }
+            atirar(tiro, 2f, -1f);
         }
     }
 
@@ -35,9 +27,16 @@ public class InimigoController : EntidadeController
         return GetComponentInChildren<SpriteRenderer>().isVisible;
     }
 
-    void atirar()
-    {
-        Instantiate(tiro, new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z), Quaternion.identity);
-    }
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.CompareTag("Jogador"))
+        {
+            collision.GetComponent<EntidadeController>().perderVida(1);
+        }
+        if (collision.CompareTag("Destruidor"))
+        {
+            Destroy(gameObject);
+        }
+	}
 
 }

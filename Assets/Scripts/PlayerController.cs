@@ -5,10 +5,6 @@ using UnityEngine;
 
 public class PlayerController : EntidadeController
 {
-    private float velocidade = 5f;
-    private Rigidbody2D rb;
-    [SerializeField] private GameObject tiro;
-    private float controladorTiro = 0f;
     private float minimoY = -4.3f;
     private float maximoY = 4.3f;
     private float minimoX = -8.22f;
@@ -17,6 +13,8 @@ public class PlayerController : EntidadeController
     {
         rb = GetComponent<Rigidbody2D>();
         HP = 2;
+        controladorTiro = 0.5f;
+        velocidade = 5f;
     }
 
     // Update is called once per frame
@@ -32,26 +30,17 @@ public class PlayerController : EntidadeController
         // instanciando o tiro e controlando o intervalo de tempo entre os tiros
         if (controladorTiro > 0f)
         {
-			controladorTiro -= 2f * Time.deltaTime;
+			controladorTiro -= 1f * Time.deltaTime;
 		}
-        if (Input.GetKey(KeyCode.Space) )
+        if (Input.GetKey(KeyCode.Space))
         {
-			if (controladorTiro <= 0f)
-			{
-				atirar();
-			}
+			atirar(tiro, 0.5f, +0.85f);	
 		}
 
         controlarLimites();
         destruirTiro();
-        Debug.Log(controladorTiro);
 	}
 
-    void atirar()
-    {
-            Instantiate(tiro, new Vector3(transform.position.x, transform.position.y + 0.85f, transform.position.z), Quaternion.identity);
-		controladorTiro = 1f;
-	}
 
 	void destruirTiro()
 	{
@@ -79,6 +68,8 @@ public class PlayerController : EntidadeController
 			transform.position = new Vector3(minimoX, transform.position.y, transform.position.z);
 		}
     }
+
+    
 
     
 

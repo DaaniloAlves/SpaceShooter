@@ -154,7 +154,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: 8
-  nave: {fileID: 7631339137878756956, guid: f9b8e938a31ffb64ba5ee339b680f61d, type: 3}
   animacao: {fileID: 7800321715257387237, guid: e7e240e5541ba1e47a9016e7e57899eb, type: 3}
 --- !u!50 &191453503609278819
 Rigidbody2D:
