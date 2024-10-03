@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3126863670266408728}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.9033816, w: -0.4288377}
   m_LocalPosition: {x: -5.8976736, y: 3.0458336, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -99,7 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4dfc0ef77f885c41b12b6cf19bcf96a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: -2
   animacao: {fileID: 7800321715257387237, guid: e7e240e5541ba1e47a9016e7e57899eb, type: 3}
 --- !u!50 &2289118777434918570
 Rigidbody2D:
@@ -162,4 +161,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.135
+  m_Radius: 0.3

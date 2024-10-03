@@ -12,7 +12,6 @@ public class PlayerController : EntidadeController
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        HP = 2;
         controladorTiro = 0.5f;
         velocidade = 5f;
     }
@@ -34,7 +33,7 @@ public class PlayerController : EntidadeController
 		}
         if (Input.GetKey(KeyCode.Space))
         {
-			atirar(tiro, 0.5f, +0.85f);	
+			atirar(tiro, 0.5f, false, 0, 7f);	
 		}
 
         controlarLimites();

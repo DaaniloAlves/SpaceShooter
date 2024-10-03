@@ -5,15 +5,13 @@ using UnityEngine;
 public class TiroController : MonoBehaviour
 {
     private Rigidbody2D rb;
-    [SerializeField] private float velocidade = 5f;
     [SerializeField] private GameObject animacao;
 
     // Start is called before the first frame update
     void Start()
     { 
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity += new Vector2(0, velocidade);
-
+        
     }
 
     // Update is called once per frame
@@ -26,13 +24,19 @@ public class TiroController : MonoBehaviour
 	{
         if (collision.CompareTag("Inimigo") || collision.CompareTag("Jogador"))
         {
-			collision.GetComponent<EntidadeController>().perderVida(1);
+            if (collision.GetComponent<Transform>().position.y < 5)
+            {
+                collision.GetComponent<EntidadeController>().perderVida(1);
+            }
 		}
         Instantiate(animacao, transform.position, Quaternion.identity);
 	    Destroy(this.gameObject);
 		
 	}
 
-
+    public void setVelocidade(Vector2 v2)
+    {
+        rb.velocity = v2;
+    }
 
 }

@@ -44,5 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 044b810e3b0fffd458d45c25f65236c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoHP: {fileID: 0}
-  player: {fileID: 7631339137878756956, guid: f9b8e938a31ffb64ba5ee339b680f61d, type: 3}
+  textHP: {fileID: 0}
+  inimigos:
+  - {fileID: 4395591956133276155, guid: 8b917cb11d5ba8a42b7646d7c70f0bad, type: 3}
+  - {fileID: 2256516339375727823, guid: 651a893f6a6823d42aab517832a8ba27, type: 3}

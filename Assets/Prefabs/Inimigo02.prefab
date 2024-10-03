@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &231300910391396142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8816205408251234299}
+  m_Layer: 11
+  m_Name: tiro
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8816205408251234299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231300910391396142}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8068431806543477611}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2256516339375727823
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,10 +40,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8068431806543477611}
-  - component: {fileID: 5960521091308186718}
   - component: {fileID: 1939801102281263366}
   - component: {fileID: 2772690177710185611}
-  m_Layer: 0
+  - component: {fileID: 3659383356457811607}
+  m_Layer: 6
   m_Name: Inimigo02
   m_TagString: Inimigo
   m_Icon: {fileID: 0}
@@ -33,24 +64,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3234242045171663378}
+  - {fileID: 8816205408251234299}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5960521091308186718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2256516339375727823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6fbd841111baa04eb7eb776a7c4c27d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animacaoDestruicao: {fileID: 2036328772004920935, guid: 9cc9e36b858b0414ca74ec73ca9f87fe, type: 3}
-  HP: 2
-  tiro: {fileID: 3126863670266408728, guid: fb1d9c474babb6f4487c625f6dc2b6a3, type: 3}
-  velocidade: -2
 --- !u!70 &1939801102281263366
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -80,7 +96,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.01492542, y: 0.02487576}
@@ -113,6 +129,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &3659383356457811607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2256516339375727823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a616cc23eb2e254db2d33ac7643d0e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animacaoDestruicao: {fileID: 2036328772004920935, guid: 9cc9e36b858b0414ca74ec73ca9f87fe, type: 3}
+  HP: 0
+  tiro: {fileID: 3126863670266408728, guid: fb1d9c474babb6f4487c625f6dc2b6a3, type: 3}
+  velocidade: 0
 --- !u!1 &8969692829495463018
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +156,7 @@ GameObject:
   - component: {fileID: 3234242045171663378}
   - component: {fileID: 3911213112578547812}
   - component: {fileID: 5112750202047409766}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: inimigo_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

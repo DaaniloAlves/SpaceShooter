@@ -6,9 +6,11 @@ public class InimigoController : EntidadeController
 {
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(0, velocidade);
-        velocidade = -2.5f;
+        pontuacao = 10;
+	    rb = GetComponent<Rigidbody2D>();
+		velocidade = -2.5f;
+		rb.velocity = new Vector2(0, velocidade);
+        
     }
 
     // Update is called once per frame
@@ -18,19 +20,18 @@ public class InimigoController : EntidadeController
         if (verificarVisibilidade())
         {
             controladorTiro -= 1f * Time.deltaTime;
-            atirar(tiro, 2f, -1f);
+            atirar(tiro, 2f, false, 0, -5f);
         }
-    }
-
-    bool verificarVisibilidade()
-    {
-        return GetComponentInChildren<SpriteRenderer>().isVisible;
-    }
+		if (gameObject.transform.position.y <= -5.5)
+		{
+			Destroy(gameObject);
+		}
+	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.CompareTag("Jogador"))
-        {
+        { 
             collision.GetComponent<EntidadeController>().perderVida(1);
         }
         if (collision.CompareTag("Destruidor"))

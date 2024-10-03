@@ -106,6 +106,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &2955572991862250679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1920344307972537240}
+  m_Layer: 7
+  m_Name: tiro
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1920344307972537240
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2955572991862250679}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.81, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4593290606521394054}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7631339137878756956
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,6 +170,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4077361806606015127}
+  - {fileID: 1920344307972537240}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3593047938654192665
@@ -153,8 +185,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90ed2591d26e974199fb24d158ec351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiro: {fileID: 8434308935921745400, guid: 5da8d3237e74fec488deade2e5f589ed, type: 3}
   animacaoDestruicao: {fileID: 2036328772004920935, guid: 9cc9e36b858b0414ca74ec73ca9f87fe, type: 3}
+  HP: 5
+  tiro: {fileID: 8434308935921745400, guid: 5da8d3237e74fec488deade2e5f589ed, type: 3}
+  velocidade: 0
 --- !u!50 &8552673834427705930
 Rigidbody2D:
   serializedVersion: 4
